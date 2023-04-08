@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-// import { ImageCategoryType } from "../service/api";
-import { ImageCategoryType } from "../service/mocks/api";
+import { ImageCategoryType } from "../service/api";
 
 export interface UserType {
    name: string;

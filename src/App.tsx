@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import User from "./pages/User";
-import Board from "./pages/Board";
-import Game from "./pages/Game";
+import BoardImages from "./pages/BoardImages";
+import BoardGame from "./pages/BoardGame";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import "./index.css";
 
@@ -19,8 +19,8 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route element={<PrivateRoutes />}>
                <Route path="/user" element={<User />} />
-               <Route path="/board/:category" element={<Board />} />
-               <Route path="/game" element={<Game />} />
+               <Route path="/images/:category" element={<BoardImages />} />
+               <Route path="/board-game" element={<BoardGame />} />
                <Route path="*" element={<Navigate replace to="/user" />} />
             </Route>
          </Routes>

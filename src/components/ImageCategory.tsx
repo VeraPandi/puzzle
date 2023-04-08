@@ -9,17 +9,13 @@ interface ImageCategoryProps {
 
 const ImageCategory = ({ title, category, array }: ImageCategoryProps) => {
    return (
-      <div className="category">
+      <>
          <h2 className="category-title p-2 text-center">{title}</h2>
 
-         <ul className="category-images w-40 border-2">
-            <li key={`category-${category}`}>
-               <Link to={`/board/${category}`} className="link-to-board">
-                  <img className="w-full" src={array[0]} alt="" />
-               </Link>
-            </li>
-         </ul>
-      </div>
+         <Link to={`/images/${category}`} className="link-to-board-images">
+            <img className="h-40 w-56 border-2" src={array[0]} alt="" />
+         </Link>
+      </>
    );
 };
 

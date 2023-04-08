@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { createImageSlice } from "../service/api";
-import { createImageSlice } from "../service/mocks/api";
+import { createImageSlice } from "../service/api";
 import { useUserStore } from "../stores/user";
+import Title from "../components/Title";
 
 const Login = () => {
    // ------- Storage cleanup for development ------- //
@@ -32,16 +32,14 @@ const Login = () => {
    };
 
    return (
-      <main className="main flex flex-col items-center justify-evenly h-screen m-20 bg-slate-300">
-         <h1 className="title my-6 text-center text-6xl font-bold leading-5">
-            Jigsaw Puzzle
-         </h1>
+      <main className="main h-screen justify-evenly bg-slate-300">
+         <Title text="Jigsaw Puzzle" styles="p-20 text-6xl" />
 
-         <section>
-            <form className="form flex flex-col items-center">
+         <section className="flex flex-col items-center justify-evenly">
+            <form className="login-form flex flex-col items-center">
                <label htmlFor="text">Entre ton nom</label>
                <input
-                  className="login-input w-64 m-5 p-4 text-center rounded"
+                  className="login-input w-64 m-5 p-4 rounded"
                   type="text"
                   id="text"
                   value={inputValue}

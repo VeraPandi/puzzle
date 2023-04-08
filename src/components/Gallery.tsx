@@ -8,49 +8,45 @@ const Gallery = () => {
    const images = users[currentUser].images;
 
    return (
-      <section className="gallery w-4/5 m-auto">
-         <h1 className="my-6 text-center text-3xl font-bold">
-            Choisis une catégorie
-         </h1>
-
+      <div className="gallery m-auto">
          {images.map((category) => (
-            <div
-               key="image-categories"
+            <ul
+               key="categories"
                className="categories flex flex-wrap justify-around"
             >
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Animal"
                      category="animal"
                      array={category.animal.map((img) => img.webformatURL)}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Ville"
                      category="city"
                      array={category.city.map((img) => img.webformatURL)}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Monument"
                      category="monument"
                      array={category.monument.map((img) => img.webformatURL)}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Peinture à l'huile"
                      category="oilPainting"
                      array={category.oilPainting.map((img) => img.webformatURL)}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Illustration"
                      category="illustration"
@@ -58,9 +54,9 @@ const Gallery = () => {
                         (img) => img.webformatURL
                      )}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Art de l'IA"
                      category="iaIllustration"
@@ -68,18 +64,18 @@ const Gallery = () => {
                         (img) => img.webformatURL
                      )}
                   />
-               </div>
+               </li>
 
-               <div className="m-2.5">
+               <li className="category m-2.5">
                   <ImageCategory
                      title="Nature"
                      category="nature"
                      array={category.nature.map((img) => img.webformatURL)}
                   />
-               </div>
-            </div>
+               </li>
+            </ul>
          ))}
-      </section>
+      </div>
    );
 };
 
