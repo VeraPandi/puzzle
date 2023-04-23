@@ -40,6 +40,14 @@ export const imageDatas = {
          id: 10,
          webformatURL: "../images/img2.jpg",
       },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
+         webformatURL: "../images/img2.jpg",
+      },
    ],
 
    city: [
@@ -81,6 +89,14 @@ export const imageDatas = {
       },
       {
          id: 10,
+         webformatURL: "../images/img2.jpg",
+      },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
          webformatURL: "../images/img2.jpg",
       },
    ],
@@ -125,6 +141,14 @@ export const imageDatas = {
          id: 10,
          webformatURL: "../images/img2.jpg",
       },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
+         webformatURL: "../images/img2.jpg",
+      },
    ],
    oilPainting: [
       {
@@ -165,6 +189,14 @@ export const imageDatas = {
       },
       {
          id: 10,
+         webformatURL: "../images/img2.jpg",
+      },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
          webformatURL: "../images/img2.jpg",
       },
    ],
@@ -209,6 +241,14 @@ export const imageDatas = {
          id: 10,
          webformatURL: "../images/img2.jpg",
       },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
+         webformatURL: "../images/img2.jpg",
+      },
    ],
    iaIllustration: [
       {
@@ -251,6 +291,14 @@ export const imageDatas = {
          id: 10,
          webformatURL: "../images/img2.jpg",
       },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
+         webformatURL: "../images/img2.jpg",
+      },
    ],
    nature: [
       {
@@ -291,6 +339,14 @@ export const imageDatas = {
       },
       {
          id: 10,
+         webformatURL: "../images/img2.jpg",
+      },
+      {
+         id: 11,
+         webformatURL: "../images/img1.jpg",
+      },
+      {
+         id: 12,
          webformatURL: "../images/img2.jpg",
       },
    ],

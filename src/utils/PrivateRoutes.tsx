@@ -10,8 +10,12 @@ const PrivateRoutes = () => {
    const params = useParams().category as string;
 
    return currentUser !== null ? (
-      <div className="page relative bg-stone-400">
-         <header className="relative w-full h-36 flex items-center p-10">
+      <div className="page bg-beige-texture grayscale-[30%] mobile:h-auto tablet:rounded-light tablet:m-10 tablet:border-[3px] tablet:border-color-black">
+         <header className="header w-full flex items-center p-10">
+            {path === "/user" && (
+               <span className="welcome-name flex h-12 mt-2 text-xl">{`Bienvenue, ${currentUser} !`}</span>
+            )}
+
             {path === `/images/${params}` || path === "/board-game" ? (
                <Navigation />
             ) : null}

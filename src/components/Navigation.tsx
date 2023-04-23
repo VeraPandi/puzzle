@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
 
 const Navigation = () => {
    const navigate = useNavigate();
@@ -8,12 +9,12 @@ const Navigation = () => {
    };
 
    return (
-      <nav className="navigation absolute top-0 left-0 m-5">
+      <nav className="navigation">
          <button
-            className="back-btn px-20 pt-4 pb-6 border-solid border-2 border-green-200 rounded-md text-white text-2xl font-bold bg-slate-600"
+            className="back-btn black-btn flex justify-center items-center h-12 w-20 rounded-light"
             onClick={goToPreviousPage}
          >
-            Retour
+            <BiArrowBack className="text-3xl text-color-white" />
          </button>
       </nav>
    );

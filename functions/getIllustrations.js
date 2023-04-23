@@ -4,7 +4,7 @@ exports.handler = async (event) => {
    try {
       const { keyword } = event.queryStringParameters;
       const response = await axios.get(
-         `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${keyword}&image_type=illustration&safesearch=true&orientation=horizontal&per_page=10`,
+         `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${keyword}&image_type=illustration&safesearch=true&orientation=horizontal&per_page=12`,
 
          {
             headers: {

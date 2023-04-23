@@ -9,7 +9,6 @@ export interface ImageType {
 export interface ImageCategoryType {
    animal: ImageType[];
    city: ImageType[];
-   monument: ImageType[];
    oilPainting: ImageType[];
    illustration: ImageType[];
    iaIllustration: ImageType[];
@@ -25,7 +24,6 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
    imageDatas: {
       animal: [],
       city: [],
-      monument: [],
       oilPainting: [],
       illustration: [],
       iaIllustration: [],
@@ -35,7 +33,6 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
    fetchImages: () => {
       const animal: ImageType[] = imageDatas.animal;
       const city: ImageType[] = imageDatas.city;
-      const monument: ImageType[] = imageDatas.animal;
       const oilPainting: ImageType[] = imageDatas.city;
       const illustration: ImageType[] = imageDatas.animal;
       const iaIllustration: ImageType[] = imageDatas.city;
@@ -45,7 +42,6 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
          imageDatas: {
             animal,
             city,
-            monument,
             oilPainting,
             illustration,
             iaIllustration,

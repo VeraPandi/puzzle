@@ -9,7 +9,6 @@ export interface ImageType {
 export interface ImageCategoryType {
    animal: ImageType[];
    city: ImageType[];
-   monument: ImageType[];
    oilPainting: ImageType[];
    illustration: ImageType[];
    iaIllustration: ImageType[];
@@ -25,7 +24,6 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
    imageDatas: {
       animal: [],
       city: [],
-      monument: [],
       oilPainting: [],
       illustration: [],
       iaIllustration: [],
@@ -42,15 +40,9 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
 
          // City
          const cityResponse = await axios.get(
-            "/.netlify/functions/getImages?keyword=city"
+            "/.netlify/functions/getImages?keyword=capital city"
          );
          const city: ImageType[] = cityResponse.data.datas;
-
-         // Monument
-         const monumentResponse = await axios.get(
-            "/.netlify/functions/getImages?keyword=monuments -sculpture -van -façade"
-         );
-         const monument: ImageType[] = monumentResponse.data.datas;
 
          // OilPainting
          const oilPaintingResponse = await axios.get(
@@ -80,7 +72,6 @@ export const createImageSlice = create<ImageSliceType>((set) => ({
             imageDatas: {
                animal,
                city,
-               monument,
                oilPainting,
                illustration,
                iaIllustration,

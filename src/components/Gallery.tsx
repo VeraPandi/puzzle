@@ -8,74 +8,70 @@ const Gallery = () => {
    const images = users[currentUser].images;
 
    return (
-      <div className="gallery m-auto">
-         {images.map((category) => (
-            <ul
-               key="categories"
-               className="categories flex flex-wrap justify-around"
-            >
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Animal"
-                     category="animal"
-                     array={category.animal.map((img) => img.webformatURL)}
-                  />
-               </li>
+      <section className="gallery flex flex-col items-center justify-center desktop:m-auto">
+         <div className="gallery-content m-auto">
+            {images.map((category) => (
+               <ul
+                  key="categories"
+                  className="categories flex flex-wrap justify-around max-w-[1180px]"
+               >
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Animal"
+                        category="animal"
+                        array={category.animal.map((img) => img.webformatURL)}
+                     />
+                  </li>
 
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Ville"
-                     category="city"
-                     array={category.city.map((img) => img.webformatURL)}
-                  />
-               </li>
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Ville"
+                        category="city"
+                        array={category.city.map((img) => img.webformatURL)}
+                     />
+                  </li>
 
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Monument"
-                     category="monument"
-                     array={category.monument.map((img) => img.webformatURL)}
-                  />
-               </li>
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Peinture à l'huile"
+                        category="oilPainting"
+                        array={category.oilPainting.map(
+                           (img) => img.webformatURL
+                        )}
+                     />
+                  </li>
 
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Peinture à l'huile"
-                     category="oilPainting"
-                     array={category.oilPainting.map((img) => img.webformatURL)}
-                  />
-               </li>
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Illustration"
+                        category="illustration"
+                        array={category.illustration.map(
+                           (img) => img.webformatURL
+                        )}
+                     />
+                  </li>
 
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Illustration"
-                     category="illustration"
-                     array={category.illustration.map(
-                        (img) => img.webformatURL
-                     )}
-                  />
-               </li>
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Art de l'IA"
+                        category="iaIllustration"
+                        array={category.iaIllustration.map(
+                           (img) => img.webformatURL
+                        )}
+                     />
+                  </li>
 
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Art de l'IA"
-                     category="iaIllustration"
-                     array={category.iaIllustration.map(
-                        (img) => img.webformatURL
-                     )}
-                  />
-               </li>
-
-               <li className="category m-2.5">
-                  <ImageCategory
-                     title="Nature"
-                     category="nature"
-                     array={category.nature.map((img) => img.webformatURL)}
-                  />
-               </li>
-            </ul>
-         ))}
-      </div>
+                  <li className="category m-3 p-2">
+                     <ImageCategory
+                        title="Nature"
+                        category="nature"
+                        array={category.nature.map((img) => img.webformatURL)}
+                     />
+                  </li>
+               </ul>
+            ))}
+         </div>
+      </section>
    );
 };
 
