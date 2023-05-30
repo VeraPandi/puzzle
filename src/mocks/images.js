@@ -2,352 +2,1021 @@ export const imageDatas = {
    animal: [
       {
          id: 1,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 2,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 3,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 4,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 5,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 6,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 7,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 8,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 9,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 10,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 11,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 12,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
    ],
-
-   city: [
+   digitalArt: [
       {
          id: 1,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 2,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 3,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 4,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 5,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 6,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 7,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 8,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 9,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 10,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 11,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 12,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
    ],
-   monument: [
+   graffiti: [
       {
          id: 1,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 2,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 3,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 4,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 5,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 6,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 7,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 8,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 9,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 10,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 11,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 12,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
    ],
-   oilPainting: [
+   landscape: [
       {
          id: 1,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 2,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 3,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 4,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 5,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 6,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 7,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 8,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 9,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 10,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 11,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 12,
-         webformatURL: "../images/img2.jpg",
-      },
-   ],
-   illustration: [
-      {
-         id: 1,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 2,
-         webformatURL: "../images/img2.jpg",
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 3,
-         webformatURL: "../images/img1.jpg",
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 4,
-         webformatURL: "../images/img2.jpg",
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 5,
-         webformatURL: "../images/img1.jpg",
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 6,
-         webformatURL: "../images/img2.jpg",
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 7,
-         webformatURL: "../images/img1.jpg",
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 8,
-         webformatURL: "../images/img2.jpg",
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 9,
-         webformatURL: "../images/img1.jpg",
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 10,
-         webformatURL: "../images/img2.jpg",
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 11,
-         webformatURL: "../images/img1.jpg",
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 12,
-         webformatURL: "../images/img2.jpg",
-      },
-   ],
-   iaIllustration: [
-      {
-         id: 1,
-         webformatURL: "../images/img2.jpg",
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
-         id: 2,
-         webformatURL: "../images/img2.jpg",
-      },
-      {
-         id: 3,
-         webformatURL: "../images/img1.jpg",
-      },
-      {
-         id: 4,
-         webformatURL: "../images/img2.jpg",
-      },
-      {
-         id: 5,
-         webformatURL: "../images/img1.jpg",
-      },
-      {
-         id: 6,
-         webformatURL: "../images/img2.jpg",
-      },
-      {
-         id: 7,
-         webformatURL: "../images/img1.jpg",
-      },
-      {
-         id: 8,
-         webformatURL: "../images/img2.jpg",
-      },
-      {
-         id: 9,
-         webformatURL: "../images/img1.jpg",
-      },
-      {
-         id: 10,
-         webformatURL: "../images/img2.jpg",
-      },
-      {
-         id: 11,
-         webformatURL: "../images/img1.jpg",
-      },
-      {
-         id: 12,
-         webformatURL: "../images/img2.jpg",
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
    ],
    nature: [
       {
          id: 1,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 2,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 3,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 4,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 5,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 6,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 7,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 8,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 9,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 10,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 11,
-         webformatURL: "../images/img1.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
       {
          id: 12,
-         webformatURL: "../images/img2.jpg",
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+   ],
+   painting: [
+      {
+         id: 1,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 2,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 3,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 4,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 5,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 6,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 7,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 8,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 9,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 10,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 11,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 12,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 13,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 14,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 15,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 16,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 17,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 18,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 19,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 20,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 21,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 22,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 23,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
+      },
+      {
+         id: 24,
+         urls: {
+            regular: "../images/img1.jpg",
+            small: "../images/img1.jpg",
+         },
       },
    ],
 };

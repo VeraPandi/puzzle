@@ -1,17 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUserStore } from "../../stores/user";
 import { usePageStore } from "../../stores/page";
+import { auth } from "../../configs/firebaseConfig";
+import { signOut } from "firebase/auth";
 import UnsubscribeMessage from "./UnsubscribeMessage";
 
 const Settings = () => {
-   const { logoutUser } = useUserStore();
+   const navigate = useNavigate();
+   const { setUserData } = useUserStore();
    const { unsubscribeMessage, handleUnsubscribeMessage } = usePageStore();
-   const currentUser = useUserStore((state) => state.currentUser);
 
-   const handleLogoutUser = () => {
-      if (currentUser !== null) {
-         logoutUser(currentUser);
+   const handleSignOut = async () => {
+      try {
+         await signOut(auth); // Log out the user
+         setUserData(null); // Deletes the current user's data in the store
+         navigate("/");
+      } catch (error) {
+         console.error("ERROR. User logout did not work properly :", error);
       }
    };
 
@@ -23,7 +29,7 @@ const Settings = () => {
                   <Link
                      to="/"
                      className="logout-link black-btn my-7 px-8 py-4 rounded-medium text-center text-xl text-color-white tracking-wide"
-                     onClick={handleLogoutUser}
+                     onClick={handleSignOut}
                   >
                      Se déconnecter
                   </Link>

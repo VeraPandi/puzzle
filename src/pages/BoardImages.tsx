@@ -1,19 +1,23 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ImageType } from "../service/api";
+import { ImageType } from "../services/api";
 import { useUserStore } from "../stores/user";
 import { usePageStore } from "../stores/page";
 import Title from "../components/Title";
 import Tag from "../components/Tag";
+import Loader from "../components/Loader";
 
 const BoardImages = () => {
    const { category } = useParams();
-   const { users } = useUserStore();
-
-   const currentUser = useUserStore((state) => state.currentUser) as string; // Set expected type of "currentUser" for constant "images"
-   const images = users[currentUser].images;
-
+   const { userData } = useUserStore();
    const tag = usePageStore((state) => state.tag);
+   const [loaderIsActive, setLoaderIsActive] = useState<boolean>(true);
+
+   useEffect(() => {
+      setTimeout(() => {
+         setLoaderIsActive(false);
+      }, 1000);
+   }, []);
 
    return (
       <main className="main items-center">
@@ -29,12 +33,13 @@ const BoardImages = () => {
          </header>
 
          <section className="images flex flex-col items-center justify-center desktop:m-auto">
-            <div className="images-content m-auto mt-10">
-               <ul className="images-list flex flex-wrap justify-evenly max-w-[1290px]">
-                  {images.map(
-                     (array: any) =>
-                        category !== undefined &&
-                        array[category].map(
+            {loaderIsActive ? (
+               <Loader />
+            ) : (
+               <div className="images-content m-auto mt-10">
+                  <ul className="images-list animation-image flex flex-wrap justify-evenly max-w-[1290px]">
+                     {userData !== null && category !== undefined ? (
+                        userData.images[category].map(
                            (element: ImageType, index: number) => (
                               <li
                                  className="image-content m-4 p-1 rounded-medium push-effect active:bg-color-white"
@@ -47,16 +52,19 @@ const BoardImages = () => {
                                  >
                                     <img
                                        className="img h-48 w-64 rounded-medium border-[3px] border-color-white"
-                                       src={element.webformatURL}
+                                       src={element.urls.small}
                                        alt=""
                                     />
                                  </Link>
                               </li>
                            )
                         )
-                  )}
-               </ul>
-            </div>
+                     ) : (
+                        <span className="loader-text">Chargement ...</span>
+                     )}
+                  </ul>
+               </div>
+            )}
          </section>
       </main>
    );

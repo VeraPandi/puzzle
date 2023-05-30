@@ -1,51 +1,65 @@
 import { create } from "zustand";
 import { imageDatas } from "./images";
 
-export interface ImageType {
-   id: number;
-   webformatURL: string;
+export interface ImageAuthorType {
+   user: {
+      name: string;
+      username: string;
+      links: {
+         html: string;
+      };
+   };
 }
 
-export interface ImageCategoryType {
+export interface ImageType {
+   id: number;
+   urls: {
+      regular: string;
+      small: string;
+   };
+}
+
+export interface ImageCategoriesType {
+   [key: string]: ImageType[];
    animal: ImageType[];
-   city: ImageType[];
-   oilPainting: ImageType[];
-   illustration: ImageType[];
-   iaIllustration: ImageType[];
+   landscape: ImageType[];
+   painting: ImageType[];
+   digitalArt: ImageType[];
+   graffiti: ImageType[];
    nature: ImageType[];
 }
 
 export interface ImageSliceType {
-   imageDatas: ImageCategoryType;
+   imageDatas: ImageCategoriesType;
    fetchImages: () => void;
 }
 
 export const createImageSlice = create<ImageSliceType>((set) => ({
    imageDatas: {
       animal: [],
-      city: [],
-      oilPainting: [],
-      illustration: [],
-      iaIllustration: [],
+      digitalArt: [],
+      graffiti: [],
+      landscape: [],
       nature: [],
+      painting: [],
    },
 
    fetchImages: () => {
       const animal: ImageType[] = imageDatas.animal;
-      const city: ImageType[] = imageDatas.city;
-      const oilPainting: ImageType[] = imageDatas.city;
-      const illustration: ImageType[] = imageDatas.animal;
-      const iaIllustration: ImageType[] = imageDatas.city;
-      const nature: ImageType[] = imageDatas.animal;
+      const digitalArt: ImageType[] = imageDatas.digitalArt;
+      const graffiti: ImageType[] = imageDatas.graffiti;
+      const landscape: ImageType[] = imageDatas.landscape;
+      const nature: ImageType[] = imageDatas.nature;
+      const painting: ImageType[] = imageDatas.painting;
 
       set({
          imageDatas: {
             animal,
-            city,
-            oilPainting,
-            illustration,
-            iaIllustration,
+            digitalArt,
+            graffiti,
+            landscape,
             nature,
+            painting,
          },
       });
    },

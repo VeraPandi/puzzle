@@ -2,9 +2,9 @@ const axios = require("axios");
 
 exports.handler = async (event) => {
    try {
-      const { keyword } = event.queryStringParameters;
+      const { id } = event.queryStringParameters;
       const response = await axios.get(
-         `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${keyword}&image_type=photo&safesearch=true&orientation=horizontal&per_page=12`,
+         `https://api.unsplash.com/collections/${id}/photos?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&per_page=24`,
 
          {
             headers: {
@@ -14,7 +14,7 @@ exports.handler = async (event) => {
          }
       );
 
-      const datas = response.data.hits;
+      const datas = response.data;
 
       return {
          statusCode: 200,

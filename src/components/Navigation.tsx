@@ -4,6 +4,7 @@ import { BiArrowBack } from "react-icons/bi";
 
 const Navigation = () => {
    const navigate = useNavigate();
+
    const goToPreviousPage = () => {
       navigate(-1);
    };

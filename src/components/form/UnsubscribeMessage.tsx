@@ -2,16 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useUserStore } from "../../stores/user";
 import { usePageStore } from "../../stores/page";
+import { deleteUser, User } from "firebase/auth";
+import { database, auth } from "../../configs/firebaseConfig";
+import { ref, remove } from "firebase/database";
 
 const UnsubscribeMessage = () => {
-   const { logoutUser, removeUser } = useUserStore();
+   const { setUserData } = useUserStore();
    const { handleUnsubscribeMessage } = usePageStore();
-   const currentUser = useUserStore((state) => state.currentUser);
+   const currentUser = auth.currentUser as User;
 
-   const handleRemoveUser = () => {
-      if (currentUser !== null) {
-         logoutUser(currentUser);
-         removeUser(currentUser);
+   const handleRemoveUser = async () => {
+      try {
+         await deleteUser(currentUser); // Remove user authentication in Firebase
+         await remove(ref(database, "users/" + currentUser.uid)); // Deletes the user's profile from the database
+         setUserData(null); // Deletes the current user's data in the store
+      } catch (error) {
+         console.log("ERROR. User deletion did not work properly :", error);
       }
    };
 

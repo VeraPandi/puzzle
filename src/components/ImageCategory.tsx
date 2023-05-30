@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { usePageStore } from "../stores/page";
 
-interface ImageCategoryProps {
+export interface ImageCategoryProps {
    title: string;
    category: string;
    array: string[];
