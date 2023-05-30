@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, Navigate, useLocation, useParams } from "react-router-dom";
 import { UserType, useUserStore } from "../stores/user";
-import { database, auth } from "../configs/firebaseConfig";
+import { database, auth } from "../config/firebaseConfig";
 import { User } from "firebase/auth";
 import { ref, onValue } from "firebase/database";
 import Menu from "../components/Menu";

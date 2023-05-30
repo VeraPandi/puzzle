@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserStore } from "../../stores/user";
 import { usePageStore } from "../../stores/page";
-import { auth } from "../../configs/firebaseConfig";
+import { auth } from "../../config/firebaseConfig";
 import { signOut } from "firebase/auth";
 import UnsubscribeMessage from "./UnsubscribeMessage";
 

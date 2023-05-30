@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useUserStore } from "../../stores/user";
 import { usePageStore } from "../../stores/page";
 import { deleteUser, User } from "firebase/auth";
-import { database, auth } from "../../configs/firebaseConfig";
+import { database, auth } from "../../config/firebaseConfig";
 import { ref, remove } from "firebase/database";
 
 const UnsubscribeMessage = () => {
@@ -13,8 +13,8 @@ const UnsubscribeMessage = () => {
 
    const handleRemoveUser = async () => {
       try {
-         await deleteUser(currentUser); // Remove user authentication in Firebase
          await remove(ref(database, "users/" + currentUser.uid)); // Deletes the user's profile from the database
+         await deleteUser(currentUser); // Remove user authentication in Firebase
          setUserData(null); // Deletes the current user's data in the store
       } catch (error) {
          console.log("ERROR. User deletion did not work properly :", error);

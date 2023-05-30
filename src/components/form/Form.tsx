@@ -8,7 +8,7 @@ import {
    updateProfile,
 } from "firebase/auth";
 import { ref, set } from "firebase/database";
-import { database, auth } from "../../configs/firebaseConfig";
+import { database, auth } from "../../config/firebaseConfig";
 
 const Form = () => {
    const navigate = useNavigate();
@@ -33,8 +33,6 @@ const Form = () => {
             error
          );
       } finally {
-         setProgressBar(0);
-
          // Create user authentication in Firebase
          await createUserWithEmailAndPassword(auth, inputEmail, inputName);
 
@@ -112,7 +110,9 @@ const Form = () => {
                {!loaderIsActive ? (
                   <span>Commencer</span>
                ) : (
-                  <span>Chargement {progressBar}%</span>
+                  <span>
+                     Chargement {progressBar >= 15 && `${progressBar}%`}
+                  </span>
                )}
             </button>
          </form>
