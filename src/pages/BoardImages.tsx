@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { ImageType } from "../services/api";
 import { useUserStore } from "../stores/user";
 import { usePageStore } from "../stores/page";
+import { useGameStore } from "../stores/game";
 import Title from "../components/Title";
 import Tag from "../components/Tag";
 import Loader from "../components/Loader";
@@ -10,7 +11,8 @@ import Loader from "../components/Loader";
 const BoardImages = () => {
    const { category } = useParams();
    const { userData } = useUserStore();
-   const tag = usePageStore((state) => state.tag);
+   const { tag } = usePageStore();
+   const { setCurrentImageData } = useGameStore();
    const [loaderIsActive, setLoaderIsActive] = useState<boolean>(true);
 
    useEffect(() => {
@@ -40,10 +42,11 @@ const BoardImages = () => {
                   <ul className="images-list animation-image flex flex-wrap justify-evenly max-w-[1290px]">
                      {userData !== null && category !== undefined ? (
                         userData.images[category].map(
-                           (element: ImageType, index: number) => (
+                           (photo: ImageType, index: number) => (
                               <li
-                                 className="image-content m-4 p-1 rounded-medium push-effect active:bg-color-white"
+                                 className="image-content relative m-4 p-1 rounded-medium push-effect active:bg-color-white"
                                  key={`${category}-img-${index}`}
+                                 onClick={() => setCurrentImageData(photo)}
                               >
                                  <Link
                                     to="/board-game"
@@ -52,10 +55,16 @@ const BoardImages = () => {
                                  >
                                     <img
                                        className="img h-48 w-64 rounded-medium border-[3px] border-color-white"
-                                       src={element.urls.small}
-                                       alt=""
+                                       src={photo.urls.small}
+                                       alt={photo.alt_description}
                                     />
                                  </Link>
+
+                                 <div className="attribution relative opacity-0 hover:opacity-100 hover:transition hover:ease-in-out hover:delay-75">
+                                    <span className="attribution-item absolute bottom-0 w-64 p-4 text-sm text-color-white rounded-br-[12px] rounded-bl-[12px] border-r-[3px] border-b-[3px] border-l-[3px] border-color-white bg-color-black opacity-80">
+                                       {photo.user.name}
+                                    </span>
+                                 </div>
                               </li>
                            )
                         )

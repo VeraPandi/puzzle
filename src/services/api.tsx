@@ -1,21 +1,30 @@
 import React from "react";
 import axios from "axios";
 
-export interface ImageAuthorType {
+export interface ImageType {
+   id: string | undefined;
+   alt_description: string;
+   height: number;
+   width: number;
+
+   links: {
+      html: string;
+   };
+
+   urls: {
+      full: string;
+      raw: string;
+      regular: string;
+      small: string;
+   };
+
    user: {
-      name: string;
-      username: string;
       links: {
          html: string;
       };
-   };
-}
-
-export interface ImageType {
-   id: number;
-   urls: {
-      regular: string;
-      small: string;
+      name: string;
+      portfolio_url: string;
+      username: string;
    };
 }
 

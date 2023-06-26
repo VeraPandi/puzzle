@@ -38,7 +38,8 @@ module.exports = {
 
       extend: {
          backgroundImage: {
-            "beige-texture": "url('/public/backgrounds/beige-texture.png')",
+            "beige-texture":
+               "url('/public/assets/backgrounds/beige-texture.png')",
          },
       },
    },
