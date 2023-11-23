@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getImages } from "../../services/api";
+import { getImages, ImageCategoriesType } from "../../services/api";
 import {
    signInWithEmailAndPassword,
    createUserWithEmailAndPassword,
@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { ref, set } from "firebase/database";
 import { database, auth } from "../../config/firebaseConfig";
+import { createPuzzleCategories } from "./functions";
 
 const Form = () => {
    const navigate = useNavigate();
@@ -36,12 +37,13 @@ const Form = () => {
          // Create user authentication in Firebase
          await createUserWithEmailAndPassword(auth, inputEmail, inputName);
 
-         setProgressBar(15);
+         setProgressBar(5);
 
-         // Gets the images to add to the user's profile
-         const images = await getImages();
+         // Gets the images and image categories to add to the user's profile
+         const images = (await getImages()) as ImageCategoriesType;
+         const puzzleCategories = createPuzzleCategories(images);
 
-         setProgressBar(60);
+         setProgressBar(20);
 
          // Creates the user's profile in the database
          const user = auth.currentUser as User;
@@ -50,14 +52,17 @@ const Form = () => {
             email: inputEmail,
             id: user.uid,
             images: images,
+            games: { allCompleted: false, completedPuzzles: puzzleCategories },
          });
 
-         setProgressBar(100);
+         setProgressBar(90);
 
          // Adds the user's name to his authentication data
          await updateProfile(user, {
             displayName: inputName,
          });
+
+         setProgressBar(100);
 
          navigate("/user");
       }

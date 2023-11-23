@@ -6,6 +6,7 @@ export interface UserType {
    id: string;
    images: ImageCategoriesType;
    username: string;
+   games: {};
 }
 
 export interface UserStoreType {

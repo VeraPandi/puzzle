@@ -7,9 +7,11 @@ const User = () => {
    const [loaderIsActive, setLoaderIsActive] = useState<boolean>(true);
 
    useEffect(() => {
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
          setLoaderIsActive(false);
       }, 1000);
+
+      return () => clearTimeout(timeout);
    }, []);
 
    return (
