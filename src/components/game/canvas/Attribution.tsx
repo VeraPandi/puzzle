@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageType } from "../../services/api";
-import { useGameStore } from "../../stores/game";
+import { ImageType } from "../../../services/api";
+import { useGameStore } from "../../../stores/game";
 
 const Attribution = () => {
    const photo = useGameStore((state) => state.currentImageData) as ImageType;

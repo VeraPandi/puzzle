@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React from "react";
 import Canvas from "../components/game/canvas/Canvas";
-import Attribution from "../components/game/Attribution";
+import Attribution from "../components/game/canvas/Attribution";
 
 const BoardGame = () => {
    return (

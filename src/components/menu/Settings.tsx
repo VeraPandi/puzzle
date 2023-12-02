@@ -14,7 +14,7 @@ const Settings = () => {
    const handleSignOut = async () => {
       try {
          await signOut(auth); // Log out the user
-         setUserData(null); // Deletes the current user's data in the store
+         setUserData(undefined); // Deletes the current user's data in the store
          navigate("/");
       } catch (error) {
          console.error("ERROR. User logout did not work properly :", error);

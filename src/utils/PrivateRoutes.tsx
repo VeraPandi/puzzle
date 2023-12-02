@@ -4,7 +4,7 @@ import { UserType, useUserStore } from "../stores/user";
 import { database, auth } from "../config/firebaseConfig";
 import { User } from "firebase/auth";
 import { ref, onValue } from "firebase/database";
-import Menu from "../components/Menu";
+import Menu from "../components/menu/Menu";
 import Navigation from "../components/Navigation";
 
 const PrivateRoutes = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { usePageStore } from "../stores/page";
+import { usePageStore } from "../../stores/page";
 
 export interface ImageCategoryProps {
    title: string;

@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { BiArrowBack } from "react-icons/bi";
 import { User } from "firebase/auth";
 import { ref, update } from "firebase/database";
 import { database, auth } from "../config/firebaseConfig";
@@ -8,47 +7,55 @@ import { useUserStore } from "../stores/user";
 import { usePageStore } from "../stores/page";
 import { useGameStore } from "../stores/game";
 import { puzzleData } from "./game/canvas/model";
+import { levels, getCurrentLevel } from "./game/levels/functions";
+import { PuzzleType, UserDataType, CompletedPuzzlesType } from "../types";
+import { BiArrowBack } from "react-icons/bi";
 
 const Navigation = () => {
    const navigate = useNavigate();
    const { userData } = useUserStore();
    const { location } = usePageStore();
-   const { puzzleIsCompleted, setPuzzleIsCompleted } = useGameStore();
+   const { levelNumber, puzzleIsCompleted, setPuzzleIsCompleted } =
+      useGameStore();
 
    const goToPreviousPage = async () => {
       // Manages the display of the success message
       setPuzzleIsCompleted(false);
 
+      const levelName = getCurrentLevel(levels, levelNumber);
+      const userGames: UserDataType = userData || { games: {} };
+      let completedGames: CompletedPuzzlesType =
+         userGames.games.completedPuzzles || {};
+
       // Manages the addition of completed puzzles to the database
-      if (location && puzzleIsCompleted && userData && puzzleData) {
-         const gameData: any = userData.games;
+      if (
+         levelName &&
+         location &&
+         puzzleIsCompleted &&
+         userData &&
+         puzzleData
+      ) {
+         if (!completedGames[location]) completedGames[location] = [];
 
-         // Firebase doesn't support empty arrays. So we replaced this
-         // value with "false" when we created the user. Then, we will
-         // need to create an empty array to add completed puzzles to game data.
-         if (gameData.completedPuzzles === false) {
-            let array: any = [];
-            array.push(puzzleData.id);
-            gameData.completedPuzzles[location] = array;
-         } else {
-            // Here we also create an empty array, if necessary.
-            if (gameData.completedPuzzles[location] === false) {
-               gameData.completedPuzzles[location] = [];
-               gameData.completedPuzzles[location].push(puzzleData.id);
-            } else {
-               gameData.completedPuzzles[location].push(puzzleData.id);
-            }
-         }
+         const property = levelName as string;
+         const completedPuzzle: any = { [property]: puzzleData.id };
+         completedGames[location].push(completedPuzzle);
 
-         gameData.completedPuzzles[location] = Array.from(
-            new Set(gameData.completedPuzzles[location].map((el: string) => el))
+         const arrayWithoutDuplicates = completedGames[location].filter(
+            (obj: PuzzleType, index: number, array: PuzzleType[]) =>
+               index ===
+               array.findIndex(
+                  (el) => JSON.stringify(el) === JSON.stringify(obj)
+               )
          );
+
+         completedGames[location] = arrayWithoutDuplicates;
 
          // Updates game data in the database
          const user = auth.currentUser as User;
          await update(ref(database, "users/" + user.uid + "/games/"), {
             allCompleted: false,
-            completedPuzzles: gameData.completedPuzzles,
+            completedPuzzles: completedGames,
          });
       }
 

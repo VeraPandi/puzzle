@@ -15,7 +15,7 @@ const UnsubscribeMessage = () => {
       try {
          await remove(ref(database, "users/" + currentUser.uid)); // Deletes the user's profile from the database
          await deleteUser(currentUser); // Remove user authentication in Firebase
-         setUserData(null); // Deletes the current user's data in the store
+         setUserData(undefined); // Deletes the current user's data in the store
       } catch (error) {
          console.log("ERROR. User deletion did not work properly :", error);
       }

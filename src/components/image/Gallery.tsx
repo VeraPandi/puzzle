@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageType } from "../services/api";
-import { useUserStore } from "../stores/user";
+import { ImageType } from "../../services/api";
+import { useUserStore } from "../../stores/user";
 import ImageCategory from "./ImageCategory";
 
 const Gallery = () => {
@@ -9,7 +9,7 @@ const Gallery = () => {
    return (
       <section className="gallery flex flex-col items-center justify-center desktop:m-auto">
          <div className="gallery-content m-auto">
-            {userData !== null && (
+            {userData !== undefined && (
                <ul
                   key="categories"
                   className="categories animation-image flex flex-wrap justify-around max-w-[1180px]"

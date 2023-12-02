@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { usePageStore } from "../stores/page";
-import Settings from "./form/Settings";
+import { usePageStore } from "../../stores/page";
+import Settings from "./Settings";
 import { HiOutlineMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 

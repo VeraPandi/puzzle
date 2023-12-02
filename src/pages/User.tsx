@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Title from "../components/Title";
-import Gallery from "../components/Gallery";
+import Gallery from "../components/image/Gallery";
 import Loader from "../components/Loader";
 
 const User = () => {

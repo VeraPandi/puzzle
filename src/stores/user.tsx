@@ -10,12 +10,12 @@ export interface UserType {
 }
 
 export interface UserStoreType {
-   userData: UserType | null;
-   setUserData: (userData: UserType | null) => void;
+   userData: UserType | undefined;
+   setUserData: (userData: UserType | undefined) => void;
 }
 
 export const useUserStore = create<UserStoreType>((set) => ({
-   userData: null,
+   userData: undefined,
 
    setUserData: (userData) => {
       set(() => ({ userData }));

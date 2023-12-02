@@ -1,20 +1,20 @@
 import { useRef, useState, useEffect } from "react";
-import { useModel, puzzleData } from "./model";
 import { useGameStore } from "../../../stores/game";
-import Loader from "../../Loader";
+import { useModel, puzzleData } from "./model";
+import { levels, getCurrentLevel } from "../levels/functions";
 import SuccessMessage from "./SuccessMessage";
-
-// Number of rows of the puzzle
-export const rows = 2 as number;
+import Loader from "../../Loader";
 
 const Canvas = () => {
    const refWrapper = useRef<HTMLDivElement>(null);
    const [loaderIsActive, setLoaderIsActive] = useState<boolean>(true);
-   const { setPuzzleIsCompleted } = useGameStore();
+   const { levelNumber, setPuzzleIsCompleted } = useGameStore();
+   const rows = levelNumber as number;
+   const levelName = getCurrentLevel(levels, levelNumber) as string;
    useModel(refWrapper, rows);
 
    const getPuzzleState = () => {
-      if (puzzleData && puzzleData.completed) {
+      if (puzzleData && puzzleData.completed && levelName) {
          setPuzzleIsCompleted(puzzleData.completed);
       }
    };
