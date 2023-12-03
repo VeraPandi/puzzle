@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getImages, ImageCategoriesType } from "../../services/api";
+import { getImages } from "../../services/api";
 import {
    signInWithEmailAndPassword,
    createUserWithEmailAndPassword,
@@ -10,6 +10,7 @@ import {
 import { ref, set } from "firebase/database";
 import { database, auth } from "../../config/firebaseConfig";
 import { createPuzzleCategories } from "./functions";
+import { ImageCategoriesType } from "../../types";
 
 const Form = () => {
    const navigate = useNavigate();

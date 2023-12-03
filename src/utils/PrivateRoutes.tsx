@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Outlet, Navigate, useLocation, useParams } from "react-router-dom";
-import { UserType, useUserStore } from "../stores/user";
+import { useUserStore } from "../stores/user";
 import { database, auth } from "../config/firebaseConfig";
 import { User } from "firebase/auth";
 import { ref, onValue } from "firebase/database";
 import Menu from "../components/menu/Menu";
 import Navigation from "../components/Navigation";
+import { UserType } from "../types";
 
 const PrivateRoutes = () => {
    const path = useLocation().pathname as string;

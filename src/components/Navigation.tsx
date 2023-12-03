@@ -8,8 +8,12 @@ import { usePageStore } from "../stores/page";
 import { useGameStore } from "../stores/game";
 import { puzzleData } from "./game/canvas/model";
 import { levels, getCurrentLevel } from "./game/levels/functions";
-import { PuzzleType, UserDataType, CompletedPuzzlesType } from "../types";
 import { BiArrowBack } from "react-icons/bi";
+import {
+   CompletedPuzzleType,
+   UserGamesType,
+   CompletedPuzzlesType,
+} from "../types";
 
 const Navigation = () => {
    const navigate = useNavigate();
@@ -23,7 +27,7 @@ const Navigation = () => {
       setPuzzleIsCompleted(false);
 
       const levelName = getCurrentLevel(levels, levelNumber);
-      const userGames: UserDataType = userData || { games: {} };
+      const userGames: UserGamesType = userData || { games: {} };
       let completedGames: CompletedPuzzlesType =
          userGames.games.completedPuzzles || {};
 
@@ -42,7 +46,11 @@ const Navigation = () => {
          completedGames[location].push(completedPuzzle);
 
          const arrayWithoutDuplicates = completedGames[location].filter(
-            (obj: PuzzleType, index: number, array: PuzzleType[]) =>
+            (
+               obj: CompletedPuzzleType,
+               index: number,
+               array: CompletedPuzzleType[]
+            ) =>
                index ===
                array.findIndex(
                   (el) => JSON.stringify(el) === JSON.stringify(obj)

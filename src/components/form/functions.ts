@@ -1,4 +1,4 @@
-import { ImageCategoriesType } from "../../services/api";
+import { ImageCategoriesType } from "../../types";
 
 export const createPuzzleCategories = (images: ImageCategoriesType) => {
    const properties: string[] = images && Object.keys(images);

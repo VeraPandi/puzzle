@@ -1,18 +1,5 @@
 import { create } from "zustand";
-import { ImageCategoriesType } from "../services/api";
-
-export interface UserType {
-   email: string;
-   id: string;
-   images: ImageCategoriesType;
-   username: string;
-   games: {};
-}
-
-export interface UserStoreType {
-   userData: UserType | undefined;
-   setUserData: (userData: UserType | undefined) => void;
-}
+import { UserStoreType } from "../types";
 
 export const useUserStore = create<UserStoreType>((set) => ({
    userData: undefined,

@@ -1,20 +1,11 @@
-export interface PieceType {
-   pieceID: number;
-   positions: { x: number; y: number };
-}
-
-export interface PuzzleObjectType {
-   id: string;
-   completed: boolean;
-   pieces: PieceType[];
-}
+import { PuzzleType, PuzzlePieceType } from "../../../types";
 
 // Create an object of pieces and a moving piece to
 // detect the movement of each puzzle piece
 export const datas = (
    puzzle: any,
    rows: number,
-   puzzleObject: PuzzleObjectType,
+   puzzleObject: PuzzleType,
    imageID: string
 ) => {
    puzzleObject = {
@@ -26,7 +17,7 @@ export const datas = (
    // Pieces object
    const figures = Object.values(puzzle.figures);
    figures.forEach((element: any, index: number) => {
-      let piece: PieceType = {
+      let piece: PuzzlePieceType = {
          pieceID: index + 1,
          positions: element.group.attrs as { x: number; y: number },
       };
@@ -43,7 +34,7 @@ export const datas = (
 };
 
 export const handleNeighboringPieces = (
-   puzzleObject: PuzzleObjectType,
+   puzzleObject: PuzzleType,
    rows: number
 ) => {
    // Checks if the X positions are the same in each column
@@ -66,7 +57,7 @@ export const handleNeighboringPieces = (
 export const handlePuzzleValidation = (
    XIdentical: boolean,
    YIdentical: boolean,
-   puzzleObject: PuzzleObjectType
+   puzzleObject: PuzzleType
 ) => {
    if (XIdentical && YIdentical) {
       puzzleObject.completed = true;

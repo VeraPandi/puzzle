@@ -1,9 +1,10 @@
-import { datas, PuzzleObjectType } from "./functions";
+import { datas } from "./functions";
 import { useGameStore } from "../../../stores/game";
 const headbreaker = require("headbreaker");
+import { PuzzleType } from "../../../types";
 
-export let puzzleData: PuzzleObjectType | undefined;
-export let puzzleObject: PuzzleObjectType;
+export let puzzleData: PuzzleType | undefined;
+export let puzzleObject: PuzzleType;
 
 export const useModel = (
    refWrapper: React.RefObject<HTMLDivElement>,

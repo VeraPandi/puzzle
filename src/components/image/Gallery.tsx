@@ -1,7 +1,7 @@
 import React from "react";
-import { ImageType } from "../../services/api";
 import { useUserStore } from "../../stores/user";
 import ImageCategory from "./ImageCategory";
+import { ImageType } from "../../types";
 
 const Gallery = () => {
    const { userData } = useUserStore();

@@ -1,24 +1,25 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useGameStore } from "../../../stores/game";
-import { useUserStore, UserStoreType } from "../../../stores/user";
+import { useUserStore } from "../../../stores/user";
 import { levels, getCompletedGames, puzzleIsCompleted } from "./functions";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import {
    CompletedPuzzlesType,
-   PuzzleType,
-   UserDataType,
+   CompletedPuzzleType,
+   UserGamesType,
+   UserStoreType,
 } from "../../../types/index";
 
 export interface StarsProps {
-   img: PuzzleType;
+   img: CompletedPuzzleType;
 }
 
 const Stars = ({ img }: StarsProps) => {
    const { category } = useParams();
    const { setLevelNumber } = useGameStore();
    const { userData } = useUserStore() as UserStoreType;
-   const userGames: UserDataType = userData || { games: {} };
+   const userGames: UserGamesType = userData || { games: {} };
    const completedGames: CompletedPuzzlesType =
       userGames.games.completedPuzzles || {};
    const arrayCompletedGames = getCompletedGames(category, completedGames);

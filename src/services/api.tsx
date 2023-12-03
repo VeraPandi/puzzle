@@ -1,42 +1,6 @@
 import React from "react";
 import axios from "axios";
-
-export interface ImageType {
-   id: string | undefined;
-   alt_description: string;
-   height: number;
-   width: number;
-
-   links: {
-      html: string;
-   };
-
-   urls: {
-      full: string;
-      raw: string;
-      regular: string;
-      small: string;
-   };
-
-   user: {
-      links: {
-         html: string;
-      };
-      name: string;
-      portfolio_url: string;
-      username: string;
-   };
-}
-
-export interface ImageCategoriesType {
-   [key: string]: ImageType[];
-   animal: ImageType[];
-   landscape: ImageType[];
-   painting: ImageType[];
-   digitalArt: ImageType[];
-   graffiti: ImageType[];
-   nature: ImageType[];
-}
+import { ImageCategoriesType } from "../types";
 
 export const getImages = async () => {
    const animalPromise = axios.get(

@@ -1,4 +1,4 @@
-import { PuzzleType, CompletedPuzzlesType } from "../../../types";
+import { CompletedPuzzleType, CompletedPuzzlesType } from "../../../types";
 
 export const levels: Record<string, number> = {
    easy: 5,
@@ -24,10 +24,10 @@ export const getCompletedGames = (
    category: any,
    completedGames: CompletedPuzzlesType
 ) => {
-   const arrayCompletedGames: PuzzleType[] =
+   const arrayCompletedGames: CompletedPuzzleType[] =
       (category &&
          completedGames[category] &&
-         completedGames[category].map((el: PuzzleType) => el)) ||
+         completedGames[category].map((el: CompletedPuzzleType) => el)) ||
       [];
 
    return arrayCompletedGames;
@@ -35,10 +35,10 @@ export const getCompletedGames = (
 
 export const puzzleIsCompleted = (
    levelName: string,
-   img: PuzzleType,
-   arrayCompletedGames: PuzzleType[]
+   img: CompletedPuzzleType,
+   arrayCompletedGames: CompletedPuzzleType[]
 ) => {
-   const matches: PuzzleType | undefined = arrayCompletedGames.find(
+   const matches: CompletedPuzzleType | undefined = arrayCompletedGames.find(
       (item: any) => item[levelName] === img.id
    );
    return matches !== undefined;
