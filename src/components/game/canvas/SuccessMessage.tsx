@@ -16,14 +16,14 @@ const SuccessMessage = () => {
 
    return (
       <div
-         className="success-container animation-image h-40 w-4/12 absolute inset-y-0 inset-x-0 z-10 m-auto rounded-light border-[3px] border-color-white bg-color-black text-color-white text-center text-2xl"
+         className="success-container animation-image absolute z-10 inset-x-0 bottom-[60%] h-48 w-5/12 p-5 m-auto border-[3px] border-color-white rounded-light text-lg text-center text-color-white bg-color-black desktop:text-2xl"
          onClick={toggleMessage}
       >
-         <RxCross2 className="relative float-right top-[5%] right-[8px] text-3xl" />
-         <span className="success-text block mt-11">Bravo ! </span>
-         <span className="success-text mb-11">
-            Vous avez réussi le puzzle !
-         </span>
+         <RxCross2 className="relative float-right w-8 top-[-11px] right-[-11px] text-3xl" />
+         <div className="success-container flex flex-col h-full w-full m-auto">
+            <span className="success-text pb-2">Bravo ! </span>
+            <span className="success-text">Vous avez réussi le puzzle !</span>
+         </div>
       </div>
    );
 };

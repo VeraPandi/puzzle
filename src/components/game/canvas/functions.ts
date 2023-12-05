@@ -41,14 +41,16 @@ export const handleNeighboringPieces = (
    const XIdentical = puzzleObject.pieces.every(
       (objet: any, index: number) =>
          index < rows ||
-         objet.positions.x === puzzleObject.pieces[index - rows].positions.x
+         Math.round(objet.positions.x) ===
+            Math.round(puzzleObject.pieces[index - rows].positions.x)
    );
 
    // Checks if the Y positions are the same in each row
    const YIdentical = puzzleObject.pieces.every(
       (objet: any, index: number) =>
          index % rows === 0 ||
-         objet.positions.y === puzzleObject.pieces[index - 1].positions.y
+         Math.round(objet.positions.y) ===
+            Math.round(puzzleObject.pieces[index - 1].positions.y)
    );
 
    handlePuzzleValidation(XIdentical, YIdentical, puzzleObject);
