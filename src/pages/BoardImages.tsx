@@ -6,6 +6,7 @@ import { useGameStore } from "../stores/game";
 import Title from "../components/Title";
 import Tag from "../components/Tag";
 import Loader from "../components/Loader";
+import Levels from "../components/game/levels/Levels";
 import Stars from "../components/game/levels/Stars";
 
 const BoardImages = () => {
@@ -57,6 +58,7 @@ const BoardImages = () => {
                                     src={img.urls.small}
                                     alt={img.alt_description || ""}
                                  />
+                                 <Levels img={img} />
                                  <Stars img={img} />
                               </li>
                            )

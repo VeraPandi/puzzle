@@ -1,7 +1,7 @@
 import { datas } from "./functions";
 import { useGameStore } from "../../../stores/game";
-const headbreaker = require("headbreaker");
 import { PuzzleType } from "../../../types";
+const headbreaker = require("headbreaker");
 
 export let puzzleData: PuzzleType | undefined;
 export let puzzleObject: PuzzleType;
