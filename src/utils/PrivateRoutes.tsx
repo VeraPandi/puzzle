@@ -6,6 +6,7 @@ import { User } from "firebase/auth";
 import { ref, onValue } from "firebase/database";
 import Menu from "../components/menu/Menu";
 import Navigation from "../components/Navigation";
+import Image from "../components/game/canvas/Image";
 import { UserType } from "../types";
 
 const PrivateRoutes = () => {
@@ -36,6 +37,7 @@ const PrivateRoutes = () => {
             {path === `/images/${params}` || path === "/board-game" ? (
                <Navigation />
             ) : null}
+            {path === `/board-game` && <Image />}
             <Menu />
          </header>
          <Outlet />
