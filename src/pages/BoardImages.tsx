@@ -27,7 +27,7 @@ const BoardImages = () => {
    }, [category, handleLocation]);
 
    return (
-      <main className="main items-center">
+      <main className="main items-center h-full">
          <header className="titles">
             <Title text="Sélectionne une image" />
 

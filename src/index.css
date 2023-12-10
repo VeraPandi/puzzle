@@ -9,8 +9,15 @@
       margin: auto;
    }
 
+   .min-height-calc {
+      min-height: calc(100vh - 136px);
+   }
+
+   .height-calc {
+      height: calc(100vh - 136px);
+   }
+
    html {
-      min-height: 100vh;
       font-family: "DynaPuff", cursive;
       letter-spacing: 0.025em;
       background-color: #f3f3f4;
@@ -18,16 +25,10 @@
 
    body {
       @apply max-width;
-      min-height: 100vh;
-   }
-
-   #root,
-   page {
-      min-height: 100vh;
    }
 
    main {
-      padding: 40px 40px 24px;
+      padding: 40px;
    }
 
    p {

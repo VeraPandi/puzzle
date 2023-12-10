@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Title from "../components/Title";
-import Gallery from "../components/image/Gallery";
+import Gallery from "../components/images/Gallery";
 import Loader from "../components/Loader";
 
 const User = () => {
@@ -15,7 +15,7 @@ const User = () => {
    }, []);
 
    return (
-      <main className="main items-center p-10">
+      <main className="main flex flex-col justify-evenly p-10 maxTablet:h-full">
          <Title text="Catégories" />
          {loaderIsActive ? <Loader /> : <Gallery />}
       </main>

@@ -16,7 +16,7 @@ const SuccessMessage = () => {
 
    return (
       <div
-         className="success-container animation-image absolute z-10 inset-x-0 bottom-[60%] h-48 w-max m-auto p-5 border-[3px] border-color-white rounded-medium text-lg text-center text-color-white bg-color-black desktop:w-4/12 desktop:text-2xl"
+         className="success-container animation-image absolute z-10 inset-x-0 bottom-[60%] h-48 w-max m-auto p-5 border-[3px] border-color-white rounded-medium text-lg text-center text-color-white bg-color-black desktop:w-4/12 largeDesktop:text-2xl"
          onClick={toggleMessage}
       >
          <button className="success-btn absolute top-2.5 right-2.5 flex justify-center items-center w-auto h-auto p-2 rounded-light">

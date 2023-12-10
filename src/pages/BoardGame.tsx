@@ -4,7 +4,7 @@ import Attribution from "../components/game/canvas/Attribution";
 
 const BoardGame = () => {
    return (
-      <main className="main items-center">
+      <main className="main items-center h-full">
          <Canvas />
          <Attribution />
       </main>

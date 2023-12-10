@@ -31,19 +31,19 @@ const UnsubscribeMessage = () => {
             </p>
          </div>
 
-         <div className="unsubscribeMessage-content text-center mt-[52px] mb-5">
+         <div className="unsubscribeMessage-content mt-[52px] mb-5 text-center">
             <h3>Souhaites-tu vraiment te désinscrire ?</h3>
             <div className="unsubscribeMessage-btns flex justify-between max-h-[92px] py-3">
                <Link
                   to="/"
-                  className="unsubscribeMessage-btn red-btn mr-2 px-8 py-4 rounded-medium text-center text-xl text-color-white tracking-wide"
+                  className="unsubscribeMessage-btn red-btn mr-2 px-8 py-4 text-center text-xl text-color-white rounded-medium tracking-wide maxTablet:h-fit"
                   onClick={handleRemoveUser}
                >
                   Oui, je me désinscris
                </Link>
 
                <button
-                  className="unsubscribeMessage-btn black-btn ml-2 px-8 py-4 rounded-medium text-center text-xl text-color-white tracking-wide"
+                  className="unsubscribeMessage-btn black-btn ml-2 px-8 py-4 text-center text-xl text-color-white rounded-medium tracking-wide"
                   onClick={() => handleUnsubscribeMessage(false)}
                >
                   Non

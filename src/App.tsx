@@ -5,7 +5,8 @@ import {
    Route,
    Navigate,
 } from "react-router-dom";
-import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
 import User from "./pages/User";
 import BoardImages from "./pages/BoardImages";
 import BoardGame from "./pages/BoardGame";
@@ -16,7 +17,8 @@ function App() {
    return (
       <Router>
          <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/registration" element={<Registration />} />
             <Route element={<PrivateRoutes />}>
                <Route path="/user" element={<User />} />
                <Route path="/images/:category" element={<BoardImages />} />

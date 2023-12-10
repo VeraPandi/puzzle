@@ -29,8 +29,8 @@ const PrivateRoutes = () => {
    }, []);
 
    return currentUser !== null ? (
-      <div className="page bg-beige-texture grayscale-[30%] mobile:h-auto tablet:rounded-light tablet:m-10 tablet:border-[3px] tablet:border-color-black">
-         <header className="header w-full flex items-center p-10">
+      <div className="page bg-beige-texture grayscale-[30%] maxTablet:min-height-calc desktop:m-10 desktop:border-[3px] desktop:border-color-black desktop:rounded-light">
+         <header className="header flex items-center w-full p-10">
             {path === "/user" && (
                <span className="welcome-name flex h-12 mt-2 text-xl">{`Bienvenue, ${currentUser.displayName} !`}</span>
             )}
