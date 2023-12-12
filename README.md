@@ -7,7 +7,7 @@
 
 ### Preview:
 
-![Jigsaw Puzzle](https://github.com/VeraPandi/puzzle/assets/84042427/d88256c0-f947-4d47-b496-f20c99ba82af)
+![puzzle](https://github.com/VeraPandi/puzzle/assets/84042427/4473a1c3-7291-41f3-b673-6187e14eecde)
 
 # Installation
 
@@ -16,3 +16,5 @@
 ## View the app
 
 #### [Jigsaw Puzzle](https://vp-jigsaw-puzzle.netlify.app/)
+
+
