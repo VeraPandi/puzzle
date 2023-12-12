@@ -17,6 +17,10 @@
       height: calc(100vh - 136px);
    }
 
+   .min-height-inherit {
+      min-height: inherit;
+   }
+
    html {
       font-family: "DynaPuff", cursive;
       letter-spacing: 0.025em;

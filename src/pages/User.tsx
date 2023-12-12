@@ -15,7 +15,7 @@ const User = () => {
    }, []);
 
    return (
-      <main className="main flex flex-col justify-evenly p-10 maxTablet:h-full">
+      <main className="main flex flex-col justify-evenly h-full maxTablet:min-height-inherit desktop:height-calc">
          <Title text="Catégories" />
          {loaderIsActive ? <Loader /> : <Gallery />}
       </main>

@@ -9,13 +9,15 @@ import {
 import { ref, set } from "firebase/database";
 import { database, auth } from "../../config/firebaseConfig";
 import { createPuzzleCategories } from "./functions";
+import { validationErrors } from "./validations";
 import { ImageCategoriesType } from "../../types";
 
 const RegistrationForm = () => {
    const navigate = useNavigate();
-   const [inputName, setInputName] = useState<string>("");
-   const [inputEmail, setInputEmail] = useState<string>("");
-   const [inputPassword, setInputPassword] = useState<string>("");
+   const [name, setName] = useState<string>("");
+   const [email, setEmail] = useState<string>("");
+   const [password, setPassword] = useState<string>("");
+   const [validation, setValidation] = useState<string>("");
    const [loaderIsActive, setLoaderIsActive] = useState<boolean>(false);
    const [progressBar, setProgressBar] = useState<number>(0);
 
@@ -25,16 +27,16 @@ const RegistrationForm = () => {
       try {
          setLoaderIsActive(true);
 
+         setProgressBar(5);
+
          // Create user authentication
-         await createUserWithEmailAndPassword(auth, inputEmail, inputPassword);
+         await createUserWithEmailAndPassword(auth, email, password);
 
          // Adds the user's name to his authentication data
          const user = auth.currentUser as User;
          await updateProfile(user, {
-            displayName: inputName,
+            displayName: name,
          });
-
-         setProgressBar(5);
 
          // Gets the images and game categories to add to the user's profile
          const images = (await getImages()) as ImageCategoriesType;
@@ -44,9 +46,8 @@ const RegistrationForm = () => {
 
          // Creates the user's profile in the database
          await set(ref(database, "users/" + user.uid), {
-            username: inputName,
-            email: inputEmail,
-            password: inputPassword,
+            username: name,
+            email: email,
             images: images,
             games: { allCompleted: false, completedPuzzles: puzzleCategories },
          });
@@ -55,15 +56,16 @@ const RegistrationForm = () => {
 
          navigate("/user");
       } catch (error) {
-         console.error(
-            "ERROR. User registration did not work correctly : ",
-            error
-         );
+         setValidation(validationErrors(error));
       }
    };
 
    return (
       <section className="registration-form w-9/12 mx-auto">
+         <h2 className="mt-10 mb-16 mx-auto text-2xl text-center">
+            Créer un compte
+         </h2>
+
          <form
             className="form-content flex flex-col items-center"
             onSubmit={handleRegistration}
@@ -78,10 +80,8 @@ const RegistrationForm = () => {
                   type="text"
                   id="username"
                   name="username"
-                  value={inputName}
-                  onChange={(e) =>
-                     setInputName(e.target.value.toLowerCase().trim())
-                  }
+                  value={name}
+                  onChange={(e) => setName(e.target.value.toLowerCase().trim())}
                   minLength={2}
                   maxLength={20}
                   required
@@ -97,9 +97,9 @@ const RegistrationForm = () => {
                   className="email-input w-72 mt-3 mb-11 p-4 border-2 rounded-light text-base desktop:mb-9"
                   type="email"
                   id="email"
-                  value={inputEmail}
+                  value={email}
                   onChange={(e) =>
-                     setInputEmail(e.target.value.toLowerCase().trim())
+                     setEmail(e.target.value.toLowerCase().trim())
                   }
                   minLength={10}
                   maxLength={40}
@@ -113,12 +113,12 @@ const RegistrationForm = () => {
                   Mot de passe
                </label>
                <input
-                  className="password-input w-72 mt-3 mb-11 p-4 border-2 rounded-light text-base desktop:mb-9"
+                  className="password-input w-72 mt-3 mb-1 p-4 border-2 rounded-light text-base desktop:mb-1"
                   type="text"
                   id="password"
-                  value={inputPassword}
+                  value={password}
                   onChange={(e) =>
-                     setInputPassword(e.target.value.toLowerCase().trim())
+                     setPassword(e.target.value.toLowerCase().trim())
                   }
                   minLength={6}
                   maxLength={15}
@@ -127,17 +127,24 @@ const RegistrationForm = () => {
                />
             </div>
 
+            {/* Validation */}
+            <span className="validation mt-9 text-xl text-color-light-red">
+               {validation}
+            </span>
+
             {/* Button */}
             <button
                type="submit"
-               className="submit-btn green-btn mt-9 mb-0 desktop:mt-10 desktop:mb-10"
+               className="submit-btn green-btn mt-9 mb-0 desktop:mt-9 desktop:mb-10"
             >
                {!loaderIsActive ? (
                   <span>Commencer</span>
-               ) : (
+               ) : !validation ? (
                   <span>
                      Chargement {progressBar >= 15 && `${progressBar}%`}
                   </span>
+               ) : (
+                  <span>commencer</span>
                )}
             </button>
          </form>

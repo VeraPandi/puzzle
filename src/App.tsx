@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Registration from "./pages/Registration";
+import PasswordReset from "./pages/PasswordReset";
 import User from "./pages/User";
 import BoardImages from "./pages/BoardImages";
 import BoardGame from "./pages/BoardGame";
@@ -19,6 +20,7 @@ function App() {
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/resetPassword" element={<PasswordReset />} />
             <Route element={<PrivateRoutes />}>
                <Route path="/user" element={<User />} />
                <Route path="/images/:category" element={<BoardImages />} />
