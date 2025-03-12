@@ -4,83 +4,68 @@
 @import "styles/animation";
 
 @layer base {
-   .max-width {
-      max-width: 1550px;
-      margin: auto;
-   }
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-   .min-height-calc {
-      min-height: calc(100vh - 136px);
-   }
+  html {
+    font-family: "DynaPuff", cursive;
+    letter-spacing: 0.025em;
+    background-color: #f3f3f4;
+  }
 
-   .height-calc {
-      height: calc(100vh - 136px);
-   }
+  main {
+    padding: 40px;
+  }
 
-   .min-height-inherit {
-      min-height: inherit;
-   }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #3f3f46;
+  }
 
-   html {
-      font-family: "DynaPuff", cursive;
-      letter-spacing: 0.025em;
-      background-color: #f3f3f4;
-   }
+  h3 {
+    padding: 0.7rem 0 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #3f3f46;
+  }
 
-   body {
-      @apply max-width;
-   }
-
-   main {
-      padding: 40px;
-   }
-
-   p {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      color: #3f3f46;
-   }
-
-   h3 {
-      padding: 0.7rem 0 1.2rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-      text-align: center;
-      color: #3f3f46;
-   }
-
-   img {
-      object-fit: cover;
-   }
+  img {
+    object-fit: cover;
+  }
 }
 
 @layer components {
-   .btn {
-      margin: 3rem 0;
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-      line-height: 2rem;
-      color: #f3f3f4;
-      border-radius: 0.75rem;
-   }
+  .btn {
+    margin: 3rem 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #f3f3f4;
+    border-radius: 0.75rem;
+  }
 
-   .green-btn {
-      @apply btn;
-      background-color: #797b34;
-      border: 4px solid #c0c556;
-      box-shadow: 0 2px 5px 0 #3a3c18;
-   }
+  .green-btn {
+    @apply btn;
+    background-color: #797b34;
+    border: 4px solid #c0c556;
+    box-shadow: 0 2px 5px 0 #3a3c18;
+  }
 
-   .black-btn {
-      background-color: #1c1c1c;
-      border: 3px solid #f3f3f4;
-      box-shadow: 0 2px 5px 0 #3a3c18;
-   }
+  .black-btn {
+    background-color: #1c1c1c;
+    border: 3px solid #f3f3f4;
+    box-shadow: 0 2px 5px 0 #3a3c18;
+  }
 
-   .red-btn {
-      background-color: #e54647;
-      border: 3px solid #f3f3f4;
-      box-shadow: 0 2px 5px 0 #3a3c18;
-   }
+  .red-btn {
+    background-color: #e54647;
+    border: 3px solid #f3f3f4;
+    box-shadow: 0 2px 5px 0 #3a3c18;
+  }
 }
